@@ -12,6 +12,7 @@
     - [ip] = TrueNAS IP address
     - [path] = NFS share path e.g. `/mnt/pool/`
     - [hostname] = Raspberry Pi hostname
+    - [space] = Make sure there is a space here
 
 1. Update Pi (Optional)
 
@@ -35,7 +36,7 @@
 
     Mount NFS boot share to local folder
     
-    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001 ` [ip] `:` [path] `/rpi-tftpboot /nfs/rpi-tftpboot/`
+    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001` [space][ip] `:` [path] `/rpi-tftpboot /nfs/rpi-tftpboot/`
 
     Get Raspberry Pi serial number 
     
@@ -65,7 +66,7 @@
 
     Mount NFS root share to local folder
 
-	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001 ` [ip] `:` [path] `/rpi-pxe /nfs/rpi-pxe`
+	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001` [space][ip] `:` [path] `/rpi-pxe /nfs/rpi-pxe`
 
     Create root folder on NFS root share
 
