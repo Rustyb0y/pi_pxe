@@ -85,3 +85,24 @@
     Replace local mounts with NFS boot share mount
 
 	[ip] `:` [path] `/rpi-tftpboot/`[serial][space]`/boot nfs defaults,vers=3,proto=tcp 0 0`
+
+6. Setup the Raspberry Pi to boot from the network
+
+    Start the Raspberry Pi configuration tool
+
+    `sudo raspi-config`
+
+    - Select 6 Advanced Options
+    - Select A6 Boot Order
+    - Select B3 Network Boot
+    - Select OK
+    - Select Reboot
+
+    Once the Raspberry Pi has rebooted, shut down the Raspberry Pi
+
+    `sudo shutdown now`
+
+    Remove the SD card and power cycle the Raspberry Pi
+
+    - If all is good the Raspberry Pi should boot from the network
+    - After booting I would recommend going over the boot log using `journalctl -b` to see if there is anything on your Pi that's going to have an issue with running from an NFS share.
