@@ -33,7 +33,7 @@
 
     Mount TrueNAS NFS share to local share
     
-    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001 [TFTP]:/mnt/Vault/Pis/rpi-tftpboot /nfs/rpi-tftpboot/`
+    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001 ` [TFTP] `:/mnt/Vault/Pis/rpi-tftpboot /nfs/rpi-tftpboot/`
 
     Get Raspberry Pi serial number 
     
@@ -41,19 +41,19 @@
 
     Create Raspberry Pi serial number folder on TrueNAS NFS share
     
-    `sudo mkdir /nfs/rpi-tftpboot/`[PSI]
+    `sudo mkdir /nfs/rpi-tftpboot/` [PSI]
 
     Copy boot partition to TrueNAS NFS share
 	
-    `sudo cp -r /boot/* /nfs/rpi-tftpboot/`[PSI]
+    `sudo cp -r /boot/* /nfs/rpi-tftpboot/` [PSI]
 
     Edit cmdline.text on TrueNAS NFS boot share to point to the TrueNAS NFS root share
 	
-    `sudo nano /nfs/rpi-tftpboot/`[PSI]`/cmdline.txt`
+    `sudo nano /nfs/rpi-tftpboot/` [PSI] `/cmdline.txt`
 		
         Replace contents with the following
         
-        `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=`[TFTP]`:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait`
+        `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [TFTP] `:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
 
 
