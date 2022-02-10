@@ -13,21 +13,21 @@
     - [path] = NFS share path e.g. `/mnt/pool/`
     - [hostname] = Raspberry Pi hostname
 
-- Update Pi (Optional)
+1. Update Pi (Optional)
 
     `sudo apt update`
     `sudo apt dist-upgrade`
 
-- Setup a specific hostname (Optional)
+2. Setup a specific hostname (Optional)
 
     `sudo nano /etc/hostname`
     `sudo nano /etc/hosts`
 
-- Reboot
+3. Reboot
 
     `sudo reboot`
 
-- Create NFS Boot Share
+4. Create NFS Boot Share
 
     Create local folder for NFS boot share
     
@@ -57,7 +57,7 @@
         
     `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [ip] `:` [path] `/rpi-pxe/` [hostname] `,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
-- Create NFS Root Share
+5. Create NFS Root Share
 
     Create local folder for NFS root share
     
