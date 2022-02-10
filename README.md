@@ -22,7 +22,28 @@
 
 4. **Create NFS Boot Share**
 
-    
+    Create local folder
+
+    `sudo mkdir -p /nfs/rpi-tftpboot`
+
+    Mount TrueNAS NFS share to local share
+
+	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001 10.0.0.3:/mnt/Vault/Pis/rpi-tftpboot /nfs/rpi-tftpboot/`
+
+    Get Raspberry Pi serial number
+
+	`vcgencmd otp_dump | grep 28: | sed s/.*://g`
+
+    Create Raspberry Pi serial number folder on TrueNAS NFS share
+	
+	`sudo mkdir /nfs/rpi-tftpboot/23cccf12`
+
+    Copy boot partition to TrueNAS NFS share
+
+	`sudo cp -r /boot/* /nfs/rpi-tftpboot/23cccf12`
+
+	sudo nano /nfs/rpi-tftpboot/23cccf12/cmdline.txt
+		console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=10.0.0.3:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait
 
 
 
