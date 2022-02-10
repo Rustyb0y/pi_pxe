@@ -20,6 +20,8 @@
     sudo nano /etc/hosts
     ```
 
+    
+
 3. **Reboot**
 
     `sudo reboot`
