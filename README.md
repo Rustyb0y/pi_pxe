@@ -36,13 +36,15 @@
 
     - Create Raspberry Pi serial number folder on TrueNAS NFS share
 	
-	    `sudo mkdir /nfs/rpi-tftpboot/23cccf12`
+	    `sudo mkdir /nfs/rpi-tftpboot/[pi serial number]`
 
     - Copy boot partition to TrueNAS NFS share
 
-	    `sudo cp -r /boot/* /nfs/rpi-tftpboot/23cccf12`
+	    `sudo cp -r /boot/* /nfs/rpi-tftpboot/[pi serial number]`
 
-	sudo nano /nfs/rpi-tftpboot/23cccf12/cmdline.txt
+    - Edit cmdline.text on TrueNAS NFS boot share to point to the TrueNAS NFS root share
+
+	sudo nano /nfs/rpi-tftpboot/[pi serial number]/cmdline.txt
 		console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=10.0.0.3:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait
 
 
