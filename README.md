@@ -51,9 +51,9 @@
 	
     `sudo nano /nfs/rpi-tftpboot/` [PSI] `/cmdline.txt`
 		
-        Replace contents with the following
+    Replace contents with the following
         
-        `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [TFTP] `:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait`
+    `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [TFTP] `:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
 
 
