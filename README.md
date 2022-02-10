@@ -17,7 +17,7 @@
 1. Update Pi (Optional)
 
     `sudo apt update`
-    
+
     `sudo apt dist-upgrade`
 
 2. Setup a specific Raspberry Pi hostname (Optional)
@@ -38,7 +38,7 @@
 
     Mount NFS boot share to local folder
     
-    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001` [space][ip] `:` [path] `/rpi-tftpboot /nfs/rpi-tftpboot/`
+    `sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001`[space][ip]`:`[path]`/rpi-tftpboot /nfs/rpi-tftpboot/`
 
     Get Raspberry Pi serial number 
     
@@ -46,19 +46,19 @@
 
     Create Raspberry Pi serial number folder on NFS share
     
-    `sudo mkdir /nfs/rpi-tftpboot/` [serial]
+    `sudo mkdir /nfs/rpi-tftpboot/`[serial]
 
     Copy boot partition files to NFS share
 	
-    `sudo cp -r /boot/* /nfs/rpi-tftpboot/` [serial]
+    `sudo cp -r /boot/* /nfs/rpi-tftpboot/`[serial]
 
     Edit cmdline.text on NFS boot share to point to the NFS root share
 	
-    `sudo nano /nfs/rpi-tftpboot/` [serial] `/cmdline.txt`
+    `sudo nano /nfs/rpi-tftpboot/`[serial]`/cmdline.txt`
 		
     Replace contents with the following
         
-    `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [ip] `:` [path] `/rpi-pxe/` [hostname] `,vers=3 rw ip=dhcp elevator=deadline rootwait`
+    `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=`[ip]`:`[path]`/rpi-pxe/`[hostname]`,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
 5. Create NFS Root Share
 
@@ -68,7 +68,7 @@
 
     Mount NFS root share to local folder
 
-	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001` [space][ip] `:` [path] `/rpi-pxe /nfs/rpi-pxe`
+	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001`[space][ip]`:`[path]`/rpi-pxe /nfs/rpi-pxe`
 
     Create root folder on NFS root share
 
@@ -76,7 +76,7 @@
 
     Rsync Raspberry Pi root to NFS root share
 
-	`sudo rsync -xa --progress --exclude /nfs / /nfs/rpi-pxe/` [hostname]
+	`sudo rsync -xa --progress --exclude /nfs / /nfs/rpi-pxe/`[hostname]
 
     Edit fstab on NFS root share to mount the NFS boot share
 
@@ -84,4 +84,4 @@
 
     Replace local mounts with NFS boot share mount
 
-	[ip] `:` [path] `/rpi-tftpboot/` [serial] ` /boot nfs defaults,vers=3,proto=tcp 0 0`
+	[ip] `:` [path] `/rpi-tftpboot/`[serial][space]`/boot nfs defaults,vers=3,proto=tcp 0 0`
