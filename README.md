@@ -8,17 +8,13 @@
 
 1. **Update Pi (Optional)**
 
-    ```bash
-    sudo apt update
-    sudo apt dist-upgrade
-    ```
+    `sudo apt update`
+    `sudo apt dist-upgrade`
 
 2. **Setup a specific hostname (Optional)**
 
-    ```bash
-    sudo nano /etc/hostname
-    sudo nano /etc/hosts
-    ```
+    `sudo nano /etc/hostname`
+    `sudo nano /etc/hosts`
 
 3. **Reboot**
 
@@ -26,7 +22,7 @@
 
 4. **Create NFS Boot Share**
 
-
+    
 
 
 
