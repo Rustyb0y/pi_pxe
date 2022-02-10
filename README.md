@@ -6,7 +6,7 @@
 
 ## Raspberry Pi Setup
 
-- Please replace the below steps with the following
+- Placeholders
 
     - [serial] = Raspberry Pi serial number
     - [ip] = TrueNAS IP address
