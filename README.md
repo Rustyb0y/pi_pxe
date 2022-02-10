@@ -44,8 +44,11 @@
 
     - Edit cmdline.text on TrueNAS NFS boot share to point to the TrueNAS NFS root share
 
-	sudo nano /nfs/rpi-tftpboot/[pi serial number]/cmdline.txt
-		console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=10.0.0.3:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait
+	    `sudo nano /nfs/rpi-tftpboot/[pi serial number]/cmdline.txt`
+		
+        Replace contents with the following
+
+        `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=10.0.0.3:/mnt/Vault/Pis/rpi-pxe/pibox,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
 
 
