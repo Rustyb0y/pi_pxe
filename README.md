@@ -22,7 +22,7 @@ sudo nano /etc/hosts
 
 3. **Reboot**
 
-`sudo reboot`
+    `sudo reboot`
 
 4. **Create NFS Boot Share**
 
