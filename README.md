@@ -6,28 +6,28 @@
 
 ## Raspberry Pi Setup
 
-**Please replace the below steps with the following**
+### Please replace the below steps with the following**
 
     [serial] = Raspberry Pi serial number
     [ip] = TrueNAS IP address
     [path] = NFS share path e.g. `/mnt/pool/`
     [hostname] = Raspberry Pi hostname
 
-1. **Update Pi (Optional)**
+### Update Pi (Optional)
 
     `sudo apt update`
     `sudo apt dist-upgrade`
 
-2. **Setup a specific hostname (Optional)**
+### Setup a specific hostname (Optional)
 
     `sudo nano /etc/hostname`
     `sudo nano /etc/hosts`
 
-3. **Reboot**
+### Reboot
 
     `sudo reboot`
 
-4. **Create NFS Boot Share**
+### Create NFS Boot Share
 
     Create local folder for NFS boot share
     
@@ -57,7 +57,7 @@
         
     `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=` [ip] `:` [path] `/rpi-pxe/` [hostname] `,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
-5. **Create NFS Root Share**
+### Create NFS Root Share
 
     Create local folder for NFS root share
     
@@ -80,5 +80,5 @@
 	`sudo nano /nfs/rpi-pxe/pibox/etc/fstab`
 
     Replace local mounts with NFS boot share mount
-    
+
 	[ip] `:` [path] `/rpi-tftpboot/` [serial] ` /boot nfs defaults,vers=3,proto=tcp 0 0`
