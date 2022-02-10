@@ -6,6 +6,8 @@
 
 ## Raspberry Pi Setup
 
+**Please replace the below 
+
 1. **Update Pi (Optional)**
 
     `sudo apt update`
