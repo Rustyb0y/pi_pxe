@@ -8,10 +8,10 @@
 
 - Please replace the below steps with the following
 
-    [serial] = Raspberry Pi serial number
-    [ip] = TrueNAS IP address
-    [path] = NFS share path e.g. `/mnt/pool/`
-    [hostname] = Raspberry Pi hostname
+    - [serial] = Raspberry Pi serial number
+    - [ip] = TrueNAS IP address
+    - [path] = NFS share path e.g. `/mnt/pool/`
+    - [hostname] = Raspberry Pi hostname
 
 - Update Pi (Optional)
 
