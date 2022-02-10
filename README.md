@@ -6,14 +6,14 @@
 
 ## Raspberry Pi Setup
 
-1. **Update Pi**
+1. **Update Pi (Optional)**
 
 ```bash
 sudo apt update
 sudo apt dist-upgrade
 ```
 
-2. **Setup a specific hostname**
+2. **Setup a specific hostname (Optional)**
 
 ```bash
 sudo nano /etc/hostname
@@ -27,5 +27,7 @@ sudo reboot
 ```
 
 4. **Create NFS Boot Share**
+
+
 
 5. **Create NFS Root Share**
