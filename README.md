@@ -17,11 +17,13 @@
 1. Update Pi (Optional)
 
     `sudo apt update`
+    
     `sudo apt dist-upgrade`
 
-2. Setup a specific hostname (Optional)
+2. Setup a specific Raspberry Pi hostname (Optional)
 
     `sudo nano /etc/hostname`
+
     `sudo nano /etc/hosts`
 
 3. Reboot
