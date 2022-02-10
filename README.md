@@ -26,4 +26,6 @@ sudo nano /etc/hosts
 sudo reboot
 ```
 
-4. **Create NFS Boot Partition**
+4. **Create NFS Boot Share**
+
+5. **Create NFS Root Share**
