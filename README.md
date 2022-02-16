@@ -2,7 +2,11 @@
 
 ## pfsense Setup
 
+1. Create/Edit DHCP Static Mapping for the Raspberry Pi 4B that you want to add
+
 ![Image](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_twXjfWi6sZ.png)
+
+2. Add your TrueNAS TFTP Server IP Address
 
 ![Image 2](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_HLhIPvvha0.png)
 
