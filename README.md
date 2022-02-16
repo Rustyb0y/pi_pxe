@@ -12,7 +12,7 @@
 
 ## TrueNAS Setup
 
-#. Setup the TFTP Service
+#. Setup the TFTP Service, I have root for the username however you can set this to a specific user if you would like.
 
 ![Image3](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_YUfjVpVHqh.png)
 
