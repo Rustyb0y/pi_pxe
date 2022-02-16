@@ -2,6 +2,8 @@
 
 ## pfsense Setup
 
+![Image](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_twXjfWi6sZ.png)
+
 ## TrueNAS Setup
 
 ## Raspberry Pi Setup
