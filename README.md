@@ -6,7 +6,7 @@
 
 ![Image](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_twXjfWi6sZ.png)
 
-2. Add your TrueNAS TFTP Server IP Address.
+2. Make sure to add your TrueNAS TFTP Server IP Address.  When the Raspberry Pi asks for it's IP from pfsense, pfsense will direct the Raspberry Pi to the TFTP server.
 
 ![Image 2](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_HLhIPvvha0.png)
 
