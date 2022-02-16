@@ -20,9 +20,13 @@
 
 ![Image5](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_w7uCbvdbBY.png)
 
-3. Setup the NFS Boot shares
+3. Setup the NFS Boot shares making sure to add your authorised network/hosts as required
 
 ![Image6](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_Uj36s1OcuM.png)
+
+4. Setup the NFS Root shares making sure to add your authorised network/hosts as required
+
+
 
 #. Setup the TFTP Service, I have root for the username however you can set this to a specific user if you would like.
 
