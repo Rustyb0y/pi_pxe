@@ -12,6 +12,10 @@
 
 ## TrueNAS Setup
 
+#. Setup the TFTP Service
+
+![Image3](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_YUfjVpVHqh.png)
+
 ## Raspberry Pi Setup
 
 ### Placeholders
