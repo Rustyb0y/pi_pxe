@@ -2,33 +2,33 @@
 
 ## pfsense Setup
 
-1. Create/Edit DHCP Static Mapping for the Raspberry Pi 4B that you want to add
+1. Create/Edit DHCP Static Mapping for the Raspberry Pi 4B that you want to add.
 
 ![Image](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_twXjfWi6sZ.png)
 
-2. Add your TrueNAS TFTP Server IP Address
+2. Add your TrueNAS TFTP Server IP Address.
 
 ![Image 2](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_HLhIPvvha0.png)
 
 ## TrueNAS Setup
 
-1. Setup the Pool to be used to hold the NFS Boot shares
+1. Setup the Pool to be used to hold the NFS Boot shares.
 
 ![Image4](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_kwQhzdS98Z.png)
 
-2. Setup the Pool to be used to hold the NFS Root shares
+2. Setup the Pool to be used to hold the NFS Root shares.
 
 ![Image5](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_w7uCbvdbBY.png)
 
-3. Setup the NFS Boot shares making sure to add your authorised network/hosts as required
+3. Setup the NFS Boot shares making sure to add your authorised network/hosts as required.
 
 ![Image6](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_Uj36s1OcuM.png)
 
-4. Setup the NFS Root shares making sure to add your authorised network/hosts as required
+4. Setup the NFS Root shares making sure to add your authorised network/hosts as required.
 
+![Image7](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_ZQlNmWkhzt.png)
 
-
-#. Setup the TFTP Service, I have root for the username however you can set this to a specific user if you would like.
+5. Setup the TFTP Service pointing to the Boot pool.
 
 ![Image3](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_YUfjVpVHqh.png)
 
