@@ -4,6 +4,8 @@
 
 ![Image](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_twXjfWi6sZ.png)
 
+![Image 2](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_HLhIPvvha0.png)
+
 ## TrueNAS Setup
 
 ## Raspberry Pi Setup
