@@ -34,7 +34,7 @@
 
 6. Make sure to run the TFTP server and set it to start automatically
 
-!Image8](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_SLo1Aq9NsH.png)
+![Image8](https://github.com/Rustyb0y/pi_pxe/blob/master/images/chrome_SLo1Aq9NsH.png)
 
 ## Raspberry Pi Setup
 
