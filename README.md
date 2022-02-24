@@ -90,25 +90,21 @@
 		
     Replace contents with the following
         
-    `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=`[ip]`:`[path]`/rpi-pxe/`[hostname]`,vers=3 rw ip=dhcp elevator=deadline rootwait`
+    `console=serial0,115200 console=tty1 root=/dev/nfs nfsroot=`[ip]`:`[path]`/`[hostname]`,vers=3 rw ip=dhcp elevator=deadline rootwait`
 
 5. **Create NFS Root Share**
 
     Create local folder for NFS root share
     
-    `sudo mkdir -p /nfs/rpi-pxe`
+    `sudo mkdir -p /nfs/root`
 
     Mount NFS root share to local folder
 
-	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001`[space][ip]`:`[path]`/rpi-pxe /nfs/rpi-pxe`
-
-    Create root folder on NFS root share
-
-	`sudo mkdir /nfs/rpi-pxe/pibox`
+	`sudo mount -t nfs -O rw,all_squash,anonuid=1001,anongid=1001`[space][ip]`:`[path]`/`[hostname]` /nfs/root`
 
     Rsync Raspberry Pi root to NFS root share
 
-	`sudo rsync -xa --progress --exclude /nfs / /nfs/rpi-pxe/`[hostname]
+	`sudo rsync -xa --progress --exclude /nfs / /nfs/`[hostname]
 
     Edit fstab on NFS root share to mount the NFS boot share
 
